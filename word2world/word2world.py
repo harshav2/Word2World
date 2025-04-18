@@ -122,11 +122,3 @@ class Word2World:
             self.total_spent += spent_this_gen
             print(f"$ spent on this gen = {spent_this_gen}")
             print(f"Total spent = {self.total_spent}")
-
-
-       
-
-
-
-
-
