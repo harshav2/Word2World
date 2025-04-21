@@ -12,7 +12,7 @@ def main():
     parser.add_argument('--model', type=str, help='Defaults to "gpt-4-turbo-2024-04-09". Currently supports gpt-4 and gpt-3.5.')
     parser.add_argument('--min_story_paragraphs', type=int, help='Defaults to "4". Provide an int, which is the minimum number of paragraphs')
     parser.add_argument('--max_story_paragraphs', type=int, help='Defaults to "5". Provide an int, which is the maximum number of paragraphs')
-    parser.add_argument('--total_objectives', type=int, help='Dafualts to 8. Used to decide number of objectives in the story.')
+    parser.add_argument('--total_objectives', type=int, help='Defaults to 8. Used to decide number of objectives in the story.')
     parser.add_argument('--rounds', type=str, help='Defaults to 3. Used to decide rounds of world generation.')
     parser.add_argument('--experiment_name', type=str, help='Defaults to "Your_word2world".')
     parser.add_argument('--save_dir', type=str, help='Defaults to "outputs/{--experiment_name}"')

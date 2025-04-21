@@ -182,7 +182,7 @@ class OpenAIGenerator(Generator):
 
         return tile_map_dict, tileset_map_discriptions, tileset_map_prompt
 
-    def extract_goals(self, story, story_prompt, character_discriptions, character_prompt, tileset_discriptions, tileset_prompt, tileset_map_discriptions, tileset_map_prompt):
+    def extract_goals(self, story, story_prompt, character_discriptions, character_prompt):
         print("Extracting goals..")
         goal_prompt = "What is the main goal for protagonist of the story? What are the small goals for protagonist to achieve the main goal of the story? Also create rewards and penalties based on the goals for protagonist. Create a score for each reward or penalty"
         goal_discriptions = openai.ChatCompletion.create(model=self.model, messages=[
@@ -190,10 +190,6 @@ class OpenAIGenerator(Generator):
                                                                                 {"role": "assistant", "content": story['choices'][0]['message']['content']},
                                                                                 {"role": "user", "content": character_prompt},
                                                                                 {"role": "assistant", "content": character_discriptions['choices'][0]['message']['content']},
-                                                                                {"role": "user", "content": tileset_prompt},
-                                                                                {"role": "assistant", "content": tileset_discriptions['choices'][0]['message']['content']},
-                                                                                {"role": "user", "content": tileset_map_prompt},
-                                                                                {"role": "assistant", "content": tileset_map_discriptions['choices'][0]['message']['content']},
                                                                                 {"role": "user", "content": goal_prompt}
                                                                                 ], 
                                                                                 temperature = 1)

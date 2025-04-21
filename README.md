@@ -62,7 +62,7 @@ python word2world/play_game.py
 
 ### To-dos:
 
-- [ ] Change the code to remove the tiles, and animations
+- [ ] Change the code to remove the tiles, and animations (Harsha)
 - [ ] Change the LLM to a local model
 - [ ] Initialise the graph database
 - [ ] Add prompting and more for extracting graph details from the story
